@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Combinator Selectors</title>
+    <style>
+        /* decendant selector  */
+        section h1{
+            background-color: orangered;
+        }
+        /* decendant to decendant */
+        section div h1 {
+            background-color: aquamarine;
+        }
+        /* child selectors > 
+        direct childs not grand childs */
+        section > h1 {
+            background-color: lightblue;
+        }
+        /* Adjacent sibling + */ 
+        section + h1 {
+            background-color: brown;
+        }
+        /* General siblings ~ */
+        section ~ h1 {
+            background-color: blanchedalmond;
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <h1>First Direct Child for section</h1>
+        <h1>Second Direct Child for section</h1>
+        <div>
+            <h1>First Grand child for SECTION and child for DIV</h1>
+            <h1>Second Grand child for SECTION and child for DIV</h1>
+        </div>
+        <h1>Third Direct Child for SECTION and sibling of DIV</h1>
+    </section>
+    <h1>Immediet sibling of SECTION</h1>
+    <h1>General siblings of SECTION</h1>
+    <h1>General siblings of SECTION</h1>
+    <h1>General siblings of SECTION</h1>
+</body>
+</html>
