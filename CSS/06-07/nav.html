@@ -7,6 +7,10 @@
     <title>Nav bar</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <style>
+        *{
+            margin: 0px;
+        }
+
         nav {
             text-align: center;
         }
@@ -22,6 +26,62 @@
             color: orange;
             text-shadow: 0px 1px 1px black;
         }
+        .card{
+            box-shadow: 0px 0px 10px 1px black;
+            height: 500px;
+            width: 400px;
+            border-radius: 20px;
+            margin: 20px auto;
+            position: relative;
+        }
+
+        .jsp{
+            position: absolute;
+            top: 0px;
+            right: 0px;
+            border: 1px solid;
+            width: 100px;
+            border-radius:0px 20px;
+            padding: 8px;
+        }
+
+        .psp{
+            border: 1px solid;
+            width: 100px;
+            border-radius: 20px 0px;
+            padding: 8px;
+        }
+
+        .jsp::first-letter, .psp::first-letter{
+            color: orange;
+            font-weight: bold;
+        }
+
+        .img-container{
+            height: 150px;
+            width: 150px;
+            border-radius: 50%;
+            border: 1px solid;
+            position: absolute;
+            top: 100px;
+            right: 30px;
+        }
+
+        img{
+            height: inherit;
+            width: inherit;
+            border-radius: 50%;
+        }
+        .lpa-container{
+            background-color: orange;
+            width: 100px;
+            text-align: center;
+            padding: 5px 20px;
+            border-radius: 20px 10px;
+            position: absolute;
+            top: 220px;
+            right: 35px;
+        }
     </style>
 </head>
 
@@ -33,6 +93,24 @@
         <a href=""><i class="fa-solid fa-map-location"></i> Enquiry</a>
         <hr>
     </nav>
+
+    <div class="card">
+        <div class="psp">
+            <h3>Pspyders</h3>
+            <span>Marthahalli</span>
+        </div>
+        <div class="jsp">
+            <h3>Jspyders</h3>
+            <span>Marthahalli</span>
+        </div>
+
+        <div class="img-container">
+            <img src="https://media.licdn.com/dms/image/v2/D4D03AQEOriDk4_jNtg/profile-displayphoto-scale_200_200/B4DZx0fsSYIoAY-/0/1771480992607?e=1784764800&v=beta&t=YnrHQ7nT8HqcwmvEswdYMN4u0TdHiiqC8U2Y6ylAopM" alt="">
+        </div>
+        <div class="lpa-container">
+            <h3>12 LPA</h3>
+        </div>
+    </div>
 </body>
 
 </html>
