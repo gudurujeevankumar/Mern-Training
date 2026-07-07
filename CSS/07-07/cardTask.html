@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Card Task</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: sans-serif;
+        }
+
+        #outer {
+            height: 500px;
+            width: 550px;
+            background: #E89052;
+            margin: 100px auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #card {
+            height: 80%;
+            width: 80%;
+            background-color: aliceblue;
+            border-radius: 5px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #profile {
+            height: 100%;
+            width: 60%;
+        }
+
+        #stats {
+            height: 100%;
+            width: 39.5%;
+        }
+
+        #stats div:hover {
+            background-color: #fcc3ac;
+            cursor: pointer;
+        }
+        #stats div {
+            height: 32.9%;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            border: 1px solid aliceblue;
+            background-color: #FBE9E2;
+        }
+
+        #stats p {
+            font-size: 24px;
+        }
+
+        #stats span {
+            font-size: 12px;
+            color: grey;
+        }
+
+        #profile img {
+            height: 100px;
+            border-radius: 50%;
+            border: 1px solid;
+        }
+
+        #profile{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-around;
+            height: 90%;
+        }
+
+        #names{
+            text-align: center;
+        }
+
+        #names span{
+            font-size: 12px;
+            color: grey;
+        }
+
+        .btns{
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .btns button{
+            padding: 10px 40px;
+            border: 2px solid #B0866B;
+            border-radius: 20px;
+            font-weight: 600;
+        }
+
+        .btns button:hover{
+            background-color: #B0866B;
+            color: aliceblue;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="outer">
+        <div id="card">
+            <div id="profile">
+                <img src="https://media.licdn.com/dms/image/v2/D4D03AQEOriDk4_jNtg/profile-displayphoto-scale_200_200/B4DZx0fsSYIoAY-/0/1771480992607?e=1784764800&v=beta&t=YnrHQ7nT8HqcwmvEswdYMN4u0TdHiiqC8U2Y6ylAopM"
+                    alt="Image is not supported by your browser">
+                <div id="names">
+                    <p>Jeevan Kumar</p>
+                    <span>Developer</span>
+                </div>
+
+                <div class="btns">
+                <button id="follow-btn">Follow</button>
+                <button id="message-btn">Message</button>
+                </div>
+            </div>
+            <div id="stats">
+                <div id="post">
+                    <p>523</p>
+                    <span>Post</span>
+                </div>
+                <div id="likes">
+                    <p>1387</p>
+                    <span>Likes</span>
+                </div>
+                <div id="followers">
+                    <p>146</p>
+                    <span>Follower</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
