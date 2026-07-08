@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid</title>
+    <style>
+        section{
+            height: 90dvh;
+            width: 90dvh;
+            display: grid;
+            /* grid-template-columns: auto auto auto; */
+            /* grid-template-columns: repeat(2,100px 200px); */
+            /* grid-template-columns: 1fr 1fr 1.5fr; */
+            grid-template-columns: repeat(2,1fr) 2fr repeat(2,1fr);
+        }
+
+        #div-1 {
+            background-color: lightblue;
+        }
+
+        #div-2 {
+            background-color: lightcoral;
+        }
+
+        #div-3 {
+            background-color: lightseagreen;
+        }
+
+        #div-4 {
+            background-color: lightgreen;
+        }
+
+        #div-5 {
+            background-color: lightsalmon;
+        }
+
+        #div-6 {
+            background-color: lightslategrey;
+        }
+
+        #div-7 {
+            background-color: #fafa8d;
+        }
+
+        #div-8 {
+            background-color: lightgreen;
+        }
+
+        #div-9 {
+            background-color: lightsalmon;
+        }
+
+        #div-10 {
+            background-color: lightseagreen;
+        }
+    </style>
+</head>
+
+<body>
+    <section>
+        <div id="div-1">1</div>
+        <div id="div-2">2</div>
+        <div id="div-3">3</div>
+        <div id="div-4">4</div>
+        <div id="div-5">5</div>
+        <div id="div-6">6</div>
+        <div id="div-7">7</div>
+        <div id="div-8">8</div>
+        <div id="div-9">9</div>
+        <div id="div-10">10</div>
+    </section>
+</body>
+
+</html>
