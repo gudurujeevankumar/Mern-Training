@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cards Task</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        body {
+            background-color: aliceblue;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            font-family: sans-serif;
+            color: #585858;
+        }
+
+        header {
+            text-align: center;
+            padding: 20px;
+            color: black;
+        }
+
+        header h1 {
+            font-weight: 400;
+        }
+
+        main {
+            display: grid;
+            grid-template-columns: repeat(3, 200px);
+            gap: 30px;
+            padding: 30px;
+        }
+
+        .cards {
+            box-shadow: 0px 0px 10px 1px grey;
+            height: 170px;
+            border-radius: 0px 0px 10px 10px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        span{
+            font-size: 12px;
+        }
+
+        #card-1 {
+            border-top: 10px solid deeppink;
+        }
+
+        #card-2 {
+            border-top: 10px solid skyblue;
+        }
+
+        #card-3 {
+            border-top: 10px solid lightgreen;
+        }
+
+        #card-4 {
+            border-top: 10px solid gold;
+        }
+
+        #card-5 {
+            border-top: 10px solid purple;
+        }
+
+        #card-6 {
+            border-top: 10px solid deeppink;
+        }
+
+        .icon-div {
+            height: 45px;
+            width: 45px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-size: 20px;
+        }
+
+        #card-1 .icon-div {
+            background: deeppink;
+        }
+
+        #card-2 .icon-div {
+            background: skyblue;
+        }
+
+        #card-3 .icon-div {
+            background: lightgreen;
+        }
+
+        #card-4 .icon-div {
+            background: gold;
+        }
+
+        #card-5 .icon-div {
+            background: purple;
+        }
+
+        #card-6 .icon-div {
+            background: deeppink;
+        }
+
+        button{
+            background-color: deeppink;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 10px;
+            color: white;
+            font-size: 11px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>We work in dedicated project</h1>
+        <h1>teams,UX design</h1>
+    </header>
+    <main>
+        <div class="cards" id="card-1">
+            <div class="icon-div">
+                <i class="fa-brands fa-searchengin"></i>
+            </div>
+
+            <p>Research user needs</p>
+            <span>Lorem, ipsum dolor sit amet consectetur adipisicing.</span>
+        </div>
+        <div class="cards" id="card-2">
+            <div class="icon-div">
+                <i class="fa-solid fa-cube"></i>
+            </div>
+
+            <p>Research user needs</p>
+            <span>Lorem, ipsum dolor sit amet consectetur adipisicing.</span>
+        </div>
+        <div class="cards" id="card-3">
+            <div class="icon-div">
+                <i class="fa-regular fa-square-caret-up"></i>
+            </div>
+
+            <p>Research user needs</p>
+            <span>Lorem, ipsum dolor sit amet consectetur adipisicing.</span>
+        </div>
+        <div class="cards" id="card-4">
+            <div class="icon-div">
+                <i class="fa-solid fa-code"></i>
+            </div>
+
+            <p>Research user needs</p>
+            <span>Lorem, ipsum dolor sit amet consectetur adipisicing.</span>
+        </div>
+        <div class="cards" id="card-5">
+            <div class="icon-div">
+                <i class="fa-solid fa-bullhorn"></i>
+            </div>
+
+            <p>Research user needs</p>
+            <span>Lorem, ipsum dolor sit amet consectetur adipisicing.</span>
+        </div>
+        <div class="cards" id="card-6">
+            <div class="icon-div">
+                <i class="fa-regular fa-circle-question"></i>
+            </div>
+
+            <p>Research user needs</p>
+            <span>Lorem, ipsum dolor sit amet consectetur adipisicing.</span>
+        </div>
+    </main>
+    <button>CONTACT US</button>
+</body>
+
+</html>
