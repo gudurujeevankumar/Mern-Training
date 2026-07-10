@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emoji Task</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        #par {
+            height: 100dvh;
+            width: 100dvw;
+            background-color: #fff8dc8d;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #emoji {
+            background-color: #ffc52d;
+            height: 200px;
+            width: 200px;
+            border-radius: 50%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            box-shadow: 0px 0px 2px 5px #f5b521;
+        }
+
+        .eyes {
+            width: 100%;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            height: fit-content;
+        }
+
+        #le, #re{
+            height: 50px;
+            width: 50px;
+            background-color: white;
+            border-radius: 50%;
+        }
+
+        .pupils {
+            height: 25px;
+            width: 25px;
+            background-color: black;
+            border-radius: 50%;
+            margin: 2px auto;
+        }
+
+        .mouth {
+            height: 40px;
+            width: 100px;
+            background-color: white;
+            border-radius: 0px 0px 100% 100%;
+            border-top: 30px solid #ffc52d;
+            display: flex;
+            align-items: start;
+            justify-content: center;
+        }
+
+        #tounge{
+            height: 50px;
+            width: 100px;
+            background-color: deeppink;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="par">
+
+        <div id="emoji">
+            <div class="eyes">
+                <div id="le">
+                    <div id="lpupil" class="pupils"></div>
+                </div>
+                <div id="re">
+                    <div id="lpupil" class="pupils"></div>
+                </div>
+            </div>
+            <div class="mouth">
+                <div id="tounge">
+
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
