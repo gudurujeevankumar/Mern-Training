@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media Queries</title>
+    <style>
+        section {
+            margin: 100px auto;
+            height: 300px;
+            width: 80%;
+            display: grid;
+            grid-template-columns: repeat(4, auto);
+            grid-template-rows: repeat(1, 200px);
+            gap: 20px;
+        }
+
+        @media all and (min-width: 0px) and (max-width: 450px) {
+            section {
+                grid-template-columns: repeat(1, auto);
+                grid-template-rows: repeat(4, 200px);
+            }
+        }
+
+        @media all and (min-width: 450px) and (max-width: 1025px) {
+            section {
+                grid-template-columns: repeat(2, auto);
+                grid-template-rows: repeat(2, 200px);
+            }
+        }
+
+        @media all and (min-width: 1025px) {
+            section {
+                grid-template-columns: repeat(4, auto);
+                grid-template-rows: repeat(1, 200px);
+            }
+        }
+        
+
+        .div-1 {
+            background-color: lightblue;
+        }
+
+        .div-2 {
+            background-color: lightcoral;
+        }
+
+        .div-3 {
+            background-color: lightgreen;
+        }
+
+        .div-4 {
+            background-color: lightsalmon;
+        }
+    </style>
+</head>
+
+<body>
+    <section>
+        <div class="div-1"></div>
+        <div class="div-2"></div>
+        <div class="div-3"></div>
+        <div class="div-4"></div>
+    </section>
+</body>
+
+</html>
