@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+    <style>
+        /* Extra Small Devices (Phones) */
+        @media (max-width: 575px) {
+            /* Styles */
+        }
+
+        /* Small Devices (Large Phones) */
+        @media (min-width: 576px) and (max-width: 767px) {
+            /* Styles */
+        }
+
+        /* Medium Devices (Tablets) */
+        @media (min-width: 768px) and (max-width: 991px) {
+            /* Styles */
+        }
+
+        /* Large Devices (Laptops) */
+        @media (min-width: 992px) and (max-width: 1199px) {
+            /* Styles */
+        }
+
+        /* Extra Large Devices (Desktops) */
+        @media (min-width: 1200px) and (max-width: 1399px) {
+            /* Styles */
+        }
+
+        /* Extra Extra Large Devices */
+        @media (min-width: 1400px) {
+            /* Styles */
+        }
+
+        .carousel {
+            height: 70vh;
+        }
+
+        .carousel-item {
+            height: 70vh;
+        }
+
+        .carousel-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .card img {
+            width: 50%;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#"><i class="bi bi-apple"></i></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Features</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Pricing</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="https://imgs.search.brave.com/Dp7HnnVA8hntL4z6a6jf24Lnx1_s42pJTT_y73vtgZE/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93d3cu/YXBwbGUuY29tL2lu/L2lwaG9uZS9ob21l/L2ltYWdlcy9vdmVy/dmlldy9jb25zaWRl/cl9tb2RhbHMvaW5u/b3ZhdGlvbi9tb2Rh/bF9sYXN0X19kMzNi/cWg3dmRvNmVfbGFy/Z2UuanBn"
+                        class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="https://imgs.search.brave.com/8vlWMBFCWL5n_zBhoUcO_J2TIQxre3gnFaIqtwwEcWc/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly93d3cu/YXBwbGUuY29tL2lu/L2lwaG9uZS0xNy1w/cm8vaW1hZ2VzL292/ZXJ2aWV3L2hpZ2hs/aWdodHMvaGlnaGxp/Z2h0c19kZXNpZ25f/ZW5kZnJhbWVfX2Zs/bmdhMGhpYm1ldV9s/YXJnZS5qcGc"
+                        class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="https://imgs.search.brave.com/tli-1Y-G6_2-JyDaPHiDyVOAzKZG8VckZLmDSzwgQA8/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pMy1w/cm9kLWFzc2V0cy5p/bmRpYWlzdG9yZS5j/b20vZmlsZXMvdXBs/b2Fkcy9iYW5uZXJz/L2hpZ2hsaWdodHMv/YmFubmVyXzE3NzI1/MjcwMTFfMDMyMS5w/bmc"
+                        class="d-block w-100" alt="...">
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+        <div class="row row-cols-1 row-cols-md-2 g-4 mt-5 m-5">
+            <div class="col">
+                <div class="card d-flex justify-content-center align-items-center p-5">
+                    <img src="https://imgs.search.brave.com/Z5QZJoKTNh3B9L5hZZsyzdF0T64j_V1J2wTRX1_gAQ0/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly9ydWtt/aW5pMS5mbGl4Y2Fy/dC5jb20vaW1hZ2Uv/MTUwMC8xNTAwL3hp/ZjBxL21vYmlsZS9z/L3QvZy8tb3JpZ2lu/YWwtaW1haGZ0NWdx/a3h6eWVxYS5qcGVn/P3E9NzA"
+                        class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">IPHONE 17</h5>
+                        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to
+                            additional content. This content is a little bit longer.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card d-flex justify-content-center align-items-center p-5">
+                    <img src="https://imgs.search.brave.com/LUdEsYvfkBBx2eAYEEZbHcK82t9TnNu2R62n4FDSY0c/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly9ydWtt/aW5pMS5mbGl4Y2Fy/dC5jb20vaW1hZ2Uv/MTUwMC8xNTAwL3hp/ZjBxL21vYmlsZS9u/L3YvYS8tb3JpZ2lu/YWwtaW1haGZ0NW54/bXlxbmRoZi5qcGVn/P3E9NzA"
+                        class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">IPHONE 17 PRO</h5>
+                        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to
+                            additional content. This content is a little bit longer.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="card d-flex justify-content-center align-items-center p-5">
+                    <img src="https://imgs.search.brave.com/Z5QZJoKTNh3B9L5hZZsyzdF0T64j_V1J2wTRX1_gAQ0/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly9ydWtt/aW5pMS5mbGl4Y2Fy/dC5jb20vaW1hZ2Uv/MTUwMC8xNTAwL3hp/ZjBxL21vYmlsZS9z/L3QvZy8tb3JpZ2lu/YWwtaW1haGZ0NWdx/a3h6eWVxYS5qcGVn/P3E9NzA"
+                        class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">IPHONE 17</h5>
+                        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to
+                            additional content. This content is a little bit longer.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card d-flex justify-content-center align-items-center p-5">
+                    <img src="https://imgs.search.brave.com/LUdEsYvfkBBx2eAYEEZbHcK82t9TnNu2R62n4FDSY0c/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly9ydWtt/aW5pMS5mbGl4Y2Fy/dC5jb20vaW1hZ2Uv/MTUwMC8xNTAwL3hp/ZjBxL21vYmlsZS9u/L3YvYS8tb3JpZ2lu/YWwtaW1haGZ0NW54/bXlxbmRoZi5qcGVn/P3E9NzA"
+                        class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">IPHONE 17 PRO</h5>
+                        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to
+                            additional content. This content is a little bit longer.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="card d-flex justify-content-center align-items-center p-5">
+                    <img src="https://imgs.search.brave.com/Z5QZJoKTNh3B9L5hZZsyzdF0T64j_V1J2wTRX1_gAQ0/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly9ydWtt/aW5pMS5mbGl4Y2Fy/dC5jb20vaW1hZ2Uv/MTUwMC8xNTAwL3hp/ZjBxL21vYmlsZS9z/L3QvZy8tb3JpZ2lu/YWwtaW1haGZ0NWdx/a3h6eWVxYS5qcGVn/P3E9NzA"
+                        class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">IPHONE 17</h5>
+                        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to
+                            additional content. This content is a little bit longer.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card d-flex justify-content-center align-items-center p-5">
+                    <img src="https://imgs.search.brave.com/LUdEsYvfkBBx2eAYEEZbHcK82t9TnNu2R62n4FDSY0c/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly9ydWtt/aW5pMS5mbGl4Y2Fy/dC5jb20vaW1hZ2Uv/MTUwMC8xNTAwL3hp/ZjBxL21vYmlsZS9u/L3YvYS8tb3JpZ2lu/YWwtaW1haGZ0NW54/bXlxbmRoZi5qcGVn/P3E9NzA"
+                        class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">IPHONE 17 PRO</h5>
+                        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to
+                            additional content. This content is a little bit longer.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+
+    </footer>
+</body>
+
+</html>
