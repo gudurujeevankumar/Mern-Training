@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LocalStorage CRUD</title>
+
+<style>
+    body{
+        font-family: Arial, Helvetica, sans-serif;
+        margin:40px;
+    }
+
+    input{
+        padding:8px;
+        margin:5px;
+    }
+
+    button{
+        padding:8px 15px;
+        cursor:pointer;
+    }
+
+    table{
+        width:60%;
+        border-collapse:collapse;
+        margin-top:20px;
+    }
+
+    table,th,td{
+        border:1px solid #000;
+    }
+
+    th,td{
+        padding:10px;
+        text-align:center;
+    }
+
+    th{
+        background:#f2f2f2;
+    }
+
+    .delete{
+        background:red;
+        color:white;
+        border:none;
+        padding:6px 12px;
+        cursor:pointer;
+    }
+</style>
+
+</head>
+<body>
+
+<h2>User Details</h2>
+
+<label>Name</label><br>
+<input type="text" id="name" placeholder="Enter Name">
+
+<br><br>
+
+<label>Job</label><br>
+<input type="text" id="job" placeholder="Enter Job">
+
+<br><br>
+
+<button onclick="addUser()">Add User</button>
+
+<table>
+
+<thead>
+<tr>
+    <th>S.No</th>
+    <th>Name</th>
+    <th>Job</th>
+    <th>Action</th>
+</tr>
+</thead>
+
+<tbody id="tableBody">
+
+</tbody>
+
+</table>
+
+<script>
+
+let users = JSON.parse(localStorage.getItem("users")) || [];
+
+displayUsers();
+
+function addUser(){
+
+    let name = document.getElementById("name").value.trim();
+    let job = document.getElementById("job").value.trim();
+
+    if(name==="" || job===""){
+        alert("Please fill all fields");
+        return;
+    }
+
+    users.push({
+        name:name,
+        job:job
+    });
+
+    localStorage.setItem("users",JSON.stringify(users));
+
+    displayUsers();
+
+    document.getElementById("name").value="";
+    document.getElementById("job").value="";
+}
+
+function displayUsers(){
+
+    let tableBody=document.getElementById("tableBody");
+
+    tableBody.innerHTML="";
+
+    users.forEach((user,index)=>{
+
+        tableBody.innerHTML +=`
+
+        <tr>
+            <td>${index+1}</td>
+            <td>${user.name}</td>
+            <td>${user.job}</td>
+            <td>
+                <button class="delete" onclick="deleteUser(${index})">
+                    Delete
+                </button>
+            </td>
+        </tr>
+
+        `;
+
+    });
+
+}
+
+function deleteUser(index){
+
+    users.splice(index,1);
+
+    localStorage.setItem("users",JSON.stringify(users));
+
+    displayUsers();
+
+}
+
+</script>
+
+</body>
+</html>
