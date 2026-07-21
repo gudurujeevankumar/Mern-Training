@@ -1,10 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Object and it behaviour</title>
     <script>
+        /* 2 types of creating object, object literal and constructor, object behaviour-- > if we pointing to one object data if we change any value with any object that was pointing to same data it will reflect to both objects */
+
         // Normal way of creating the object (object literal)
         let obj1 = {};
         console.log(obj1);
@@ -17,9 +20,9 @@
         // object behaviour (Mutable and data will save in heap)
 
         let obj3 = {
-            uid:100,
-            uname:"Ram",
-            ucity:"Banglore",
+            uid: 100,
+            uname: "Ram",
+            ucity: "Banglore",
         }
         console.log(obj3);
         console.log(obj3.ucity);
@@ -27,11 +30,13 @@
         let s1 = obj3;
         console.log(s1);
 
-        s1.ucity="Chennai";
-        console.log(obj3.ucity,s1.ucity); // If we change the value of in obj3 --> it will also changed in s1 also
+        s1.ucity = "Chennai";
+        console.log(obj3.ucity, s1.ucity); // If we change the value of in obj3 --> it will also changed in s1 also
     </script>
 </head>
+
 <body>
     <h1>Object</h1>
 </body>
+
 </html>
