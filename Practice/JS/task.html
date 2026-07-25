@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paint Grid</title>
+
+    <style>
+        #grid,
+        #cPallet {
+            display: grid;
+            gap: 5px;
+            margin-top: 15px;
+        }
+
+        .box,
+        .col {
+            width: 50px;
+            height: 50px;
+            border: 1px solid black;
+            cursor: pointer;
+        }
+
+        .selected {
+            border: 3px solid blue;
+        }
+    </style>
+</head>
+<body>
+
+    <input type="number" id="size" placeholder="Enter n">
+    <button onclick="createGrid()">Create Grid</button>
+
+    <div id="cPallet"></div>
+    <br>
+    <div id="grid"></div>
+
+    <script>
+        let selectedColor = "";
+
+        function createGrid() {
+            const n = Number(document.getElementById("size").value);
+
+            if (n <= 0) return;
+
+            const grid = document.getElementById("grid");
+            const cPallet = document.getElementById("cPallet");
+
+            grid.innerHTML = "";
+            cPallet.innerHTML = "";
+
+            grid.style.gridTemplateColumns = `repeat(${n}, 50px)`;
+            cPallet.style.gridTemplateColumns = `repeat(${n}, 50px)`;
+
+            // Create colour palette
+            for (let i = 0; i < n; i++) {
+                const color = "#" + Math.floor(Math.random() * 16777215)
+                    .toString(16)
+                    .padStart(6, "0");
+
+                const col = document.createElement("div");
+                col.className = "col";
+                col.style.backgroundColor = color;
+
+                col.addEventListener("click", () => {
+                    selectedColor = color;
+
+                    document.querySelectorAll(".col").forEach(c =>
+                        c.classList.remove("selected")
+                    );
+
+                    col.classList.add("selected");
+                });
+
+                cPallet.appendChild(col);
+            }
+
+            // Create grid
+            for (let i = 0; i < n * n; i++) {
+                const box = document.createElement("div");
+                box.className = "box";
+
+                box.addEventListener("click", () => {
+                    if (selectedColor) {
+                        box.style.backgroundColor = selectedColor;
+                    }
+                });
+
+                grid.appendChild(box);
+            }
+        }
+    </script>
+
+</body>
+</html>
