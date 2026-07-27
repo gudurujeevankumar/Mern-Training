@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conditional Statements</title>
+</head>
+<body>
+    <h1>Conditional Statements</h1>
+    <script>
+        // let amt = Number(prompt("Enter the amount :"))
+        let amt = 6700;
+        if (amt < 100) console.log("Enter more than 100 and multiples of 100,200,500,2000 only");
+
+        let c2000 = Math.trunc(amt/2000);
+        console.log(`2000 * ${c2000} = ${c2000 * 2000}`)
+        amt = amt % 2000;
+
+        let c500 = Math.trunc(amt/500);
+        console.log(`500 * ${c500} = ${c500 * 500}`)
+        amt = amt % 500;
+
+        let c200 = Math.trunc(amt/200);
+        console.log(`200 * ${c200} = ${c200 * 200}`)
+        amt = amt % 200;
+
+        let c100 = Math.trunc(amt/100);
+        console.log(`100 * ${c100} = ${c100 * 100}`)
+        amt = amt % 100;
+    </script>
+</body>
+</html>
