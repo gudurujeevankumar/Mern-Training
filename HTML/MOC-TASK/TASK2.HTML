@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TASK 2</title>
+    <style>
+        body{
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        #parent{
+            border: 1px solid;
+            height: 500px;
+            width: 500px;
+            display: grid;
+            align-content: space-around;
+            justify-content: space-around;
+            grid-template-columns: repeat(3,100px);
+            position: absolute;
+        }
+        .childs {
+            border: 1px solid;
+            height: 100px;
+            width: 100px;
+        }
+
+        #parent:hover .hide{
+            position: absolute;
+            /* top: 74px;
+            left:33.5px; */
+        }
+    </style>
+</head>
+<body>
+    <div id="parent">
+        <div id="child-1" class="childs hide"></div>
+        <div id="child-2" class="childs hide"></div>
+        <div id="child-3" class="childs hide"></div>
+        <div id="child-4" class="childs hide"></div>
+        <div id="child-5" class="childs hide"></div>
+        <div id="child-6" class="childs hide"></div>
+    </div>
+</body>
+</html>
