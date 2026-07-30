@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Half Circle Loader</title>
+
+<style>
+body{
+    margin:0;
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+#parent{
+    width:200px;
+    height:200px;
+    border:2px solid #ccc;
+    border-radius:50%;
+    position:relative;
+    overflow:hidden;
+}
+
+/* Half capsule */
+#scroller{
+    width:100px;
+    height:200px;
+    background:deepskyblue;
+
+    position:absolute;
+    left:50%;
+    top:0;
+
+    /* Rotate around the center of the parent */
+    transform-origin:left center;
+
+    animation:spin 2s linear infinite;
+}
+
+@keyframes spin{
+    from{
+        transform:rotate(0deg);
+    }
+    to{
+        transform:rotate(360deg);
+    }
+}
+.cover{
+    height: 150px;
+    width: 150px;
+    border:2px solid #ccc;
+    z-index: 3;
+    background-color: white;
+    position: fixed;
+    border-radius: 50%;
+}
+</style>
+</head>
+
+<body>
+
+<div class="cover"></div>
+<div id="parent">
+    <div id="scroller"></div>
+</div>
+
+</body>
+</html>
