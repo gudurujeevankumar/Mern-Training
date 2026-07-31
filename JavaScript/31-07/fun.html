@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Function</title>
+</head>
+
+<body>
+    <h1>Function</h1>
+    <script>
+        // main()
+        // function main() {
+        //     console.log("main starts")
+        //     let res = m1()
+        //     console.log(res)
+        //     console.log("main ends")
+        // }
+        // function m1() {
+        //     console.log("m1 starts")
+        //     return "hi"
+        //     console.log("m1 ends")
+        // }
+
+        // main();
+
+        // function main() {
+        //     console.log("main starts");
+
+        //     console.log(m1);
+
+        //     var m1 = function () {
+        //         return "Hello";
+        //     };
+
+        //     console.log(m1());
+
+        //     console.log("main ends");
+        // }
+
+        function main() {
+            console.log("main starts");
+
+            function m1() {
+                console.log("m1");
+                return m2;
+            }
+
+            function m2() {
+                console.log("m2");
+                return "Done";
+            }
+
+            let x = m1();
+            console.log(x());
+            console.log("main ends");
+        }
+
+        main();
+    </script>
+</body>
+
+</html>
