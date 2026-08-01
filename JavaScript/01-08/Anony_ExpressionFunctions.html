@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anonymous Function</title>
+</head>
+
+<body>
+    <script>
+        // Anonymous Function - a function without name 
+        let x = function () // we must have to store the anonymous function into varible otherwise SyntaxError will be occors
+        {
+            console.log("Hello Basha");
+        }
+        x() // we must have to call the ananymous or function declaration function with variable only
+        // This is called function expression (storing function in variable and calling with varible() )
+
+
+        // Function Expression
+        let mul = function James(a,b){
+            return a * b
+        }
+        mul(6,6) // no output because there is a return
+        console.log(mul(3,6))  // must console the function calling to get return value
+        console.log(mul()) // NaN because no input was given to function
+    </script>
+</body>
+
+</html>
