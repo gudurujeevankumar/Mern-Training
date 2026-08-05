@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Counter App</title>
+    <style>
+        *{
+            margin: 0px;
+        }
+        nav{
+            padding: 20px;
+            background-color: grey;
+            color: white;
+        }
+
+        section > #count-cont{
+            margin: 30px auto;
+            height: 80px;
+            width: 200px;
+            text-align: center;
+            border: 1px solid;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <h2>🔄 Counter App</h2>
+    </nav>
+
+    <section>
+        <div id="count-cont">
+            <h2>Count Value</h2>
+            <p id="count-val"></p>
+            <button onclick="dec()">Dec</button>
+            <button onclick="inc()">Inc</button>
+        </div>
+    </section>
+
+    <!-- Script -->
+     <script>
+        let val = document.getElementById("count-val");
+
+        let c = 0;
+        val.textContent = c;
+
+        function inc(){
+            c += 1;
+            val.textContent = c;
+        }
+
+        function dec(){
+            if (c > 0) {
+                c -= 1;
+                val.textContent = c;
+            }
+        }
+     </script>
+</body>
+</html>
