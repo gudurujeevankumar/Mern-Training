@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Greet</title>
+    <style>
+         section>#container{
+            height: 400px;
+            width: 600px;
+             background-color: rgb(227, 246, 142);
+            margin: 100px auto;
+            text-align: center;
+            border: solid ;
+            padding: 20px;
+
+         }
+
+          button{
+            height: 50px;
+            width: 100px;
+            border-radius: 5px;
+            font-size: 20px;
+            color: white;
+            background-color: black;
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <div id="container">
+            <h1 id="text"></h1>
+            <button id="hello" onclick="hello()">Helloo</button>
+            <button id="hi">Hiii</button>
+            <button id="bye">Byee</button>
+        </div>
+    </section>
+</body>
+<script>
+    let cont=document.getElementById('text');
+    let hii=document.getElementById('hi');
+    let byee=document.getElementById('bye');
+
+    let c="SunShine"
+    cont.textContent=c;
+
+    function hello(){
+        cont.textContent="Helloo "+c;
+    }
+
+    hii.onclick=function(){
+        cont.textContent="Hiii "+c;
+    }
+
+    byee.addEventListener('click',function(){
+         cont.textContent="Byeee "+c;
+    })
+
+
+
+
+</script>
+</html>
