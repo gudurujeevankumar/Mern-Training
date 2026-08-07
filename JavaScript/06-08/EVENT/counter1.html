@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>COUNTER 1</title>
+    <style>
+        
+        section>#container{
+            height: 400px;
+            width: 600px;
+            background-color: rgb(227, 246, 142);
+            margin: 100px auto;
+            text-align: center;
+            border: solid 1px green;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        button{
+            height: 50px;
+            width: 80px;
+            border-radius: 5px;
+            color: white;
+            background-color: black;
+        }
+        #btncontainer{
+            height: 150px;
+            width: 450px;
+            display: grid;
+            grid-template-columns: repeat(2,auto);
+            justify-content: space-around;
+            align-items: space-around;
+        }
+    
+    </style>
+</head>
+<body>
+    <section>
+        <div id="container">
+            <h1 id="num"></h1>
+            <div id="btncontainer">
+            <button id="btn-1" onclick="btn1()">+1</button>
+            <button id="btn-2" onclick="btn2()">+2</button>
+            <button id="btn-5">+5</button>
+            <button id="btn-10">+10</button>
+            </div>
+            <button id="reseting">Reset</button>
+        </div>
+    </section>
+</body>
+<script>
+    let c=0;
+    num.textContent=c;
+
+    let contnet=document.getElementById('num');
+    let plus1=document.getElementById('btn-1');
+    let plus2=document.getElementById('btn-2');
+    let plus5=document.getElementById('btn-5');
+    let plus10=document.getElementById('btn-10');
+    let resetbtn=document.getElementById('reseting');
+
+    function btn1(){
+        c=c+1;
+        contnet.textContent=c;
+    }
+
+    function btn2(){
+        c=c+2;
+        contnet.textContent=c;
+    }
+
+    plus5.onclick=function(){
+        c=c+5;
+        contnet.textContent=c;
+    }
+
+    plus10.addEventListener('click',function(){
+        c=c+10;
+        contnet.textContent=c;
+    })
+
+     resetbtn.addEventListener('click',function(){
+        c=0;
+        contnet.textContent=c;
+     })
+
+
+
+
+
+</script>
+</html>
