@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attributes</title>
+    <style>
+        .bg-color{
+            background-color: orange;
+        }
+        .txt-color{
+            color: white;
+        }
+        .txt-center{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1 class="bg-color" id="h1_tag">Hello This is H1 Tag</h1>
+
+    <script>
+        let h1Tag = document.getElementById("h1_tag");
+
+        // h1Tag.setAttribute('class','txt-center');
+        h1Tag.classList.add("txt-center"); // without removing all classes it add new one
+        h1Tag.classList.remove("bg-color"); // remove only perticular class 
+
+        h1Tag.classList.toggle("bg-color"); // adds class
+        h1Tag.classList.toggle("bg-color"); // removes class as well
+
+        let contain = h1Tag.classList.contains("txt-center");
+        console.log("contain"); // returns true or false if there is element or not 
+    </script>
+</body>
+</html>
