@@ -29,6 +29,7 @@
             text-align: center;
             border: 1px solid;
             padding: 10px;
+            border-radius: 10px;
         }
 
         .dark{
@@ -40,7 +41,7 @@
 <body>
     <div class="container">
         <button id="btn" class="dark">
-            Button
+            Change to Dark
         </button>
 
         <div id="box">
@@ -59,9 +60,15 @@
 
             let i = btn.classList.contains("dark");
             if(i){
-                heading.textContent = "This dark mode";
+                heading.textContent = "This light mode";
+                btn.textContent = "Change to dark";
+                
             }
-            else heading.textContent = "This light mode";
+            else {
+                
+                heading.textContent = "This dark mode";
+                btn.textContent = "Change to light";
+            }
 
         })
     </script>
