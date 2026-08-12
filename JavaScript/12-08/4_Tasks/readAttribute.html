@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>readAttribute</title>
+</head>
+
+<body>
+    <!-- 3. Read an Attribute
+    Concepts: getAttribute()
+    Create an anchor:
+    <a href="https://example.com">Visit Website</a>
+    Create a button "Show URL".
+    When clicked, retrieve the href using getAttribute() and display it inside a paragraph. -->
+
+    <a id="link" href="https://www.qspiders.com">Visite Website</a>
+    <br> <br>
+    <button id="btn">Show URL</button>
+    <p id="msg"></p>
+
+    <script>
+        let btn = document.getElementById("btn");
+        let link = document.getElementById('link');
+        let msg = document.getElementById('msg');
+
+        btn.addEventListener('click',()=>{
+            let linkAddress = link.getAttribute('href');
+            msg.textContent = 'URL : ' + linkAddress;
+        })
+    </script>
+</body>
+
+</html>
