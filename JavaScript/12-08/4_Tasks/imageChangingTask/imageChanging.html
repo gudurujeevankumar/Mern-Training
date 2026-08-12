@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        img{
+            height: 400px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 2.Change an Existing Attribute
+
+    Concepts: setAttribute(), getAttribute()
+
+    Create an image with:
+
+    src="image1.jpg"
+
+    Create a button "Change Image".
+
+    When clicked, change the src attribute to another image. -->
+
+    <img src="ntr.png" id="img" alt="Your Image is not supported by this browser or somthing wrong">
+    <hr>
+    <button id="btn">Change Image</button>
+
+    <script>
+        let img = document.getElementById("img");
+        let btn = document.getElementById("btn");
+
+        btn.addEventListener('click',()=>{
+            let whichImg = img.getAttribute('src');
+
+            if(whichImg == 'ntr.png'){
+                img.setAttribute('src','sunil.png');
+            }
+            else{
+                img.setAttribute('src','ntr.png');
+            }
+        })
+    </script>
+</body>
+
+</html>
