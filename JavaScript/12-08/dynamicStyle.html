@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Styling</title>
+</head>
+<body>
+    <h1 id="h1-tag">Hello Sunshine 🌞</h1>
+    <button id="btn">Button</button>
+
+    <script>
+        let h1Tag = document.getElementById("h1-tag");
+        let btn = document.getElementById("btn");
+
+        btn.addEventListener("click",function (){
+            h1Tag.style.backgroundColor='orange';
+        })
+    </script>
+</body>
+</html>
