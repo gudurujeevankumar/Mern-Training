@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create and Append</title>
+</head>
+<body>
+    <p id="rem-data">Extra dataa..</p>
+    <div id="container">
+        <h2 id="div-child">Div Child</h2>
+    </div>
+    <script>
+        let h1Tag = document.createElement("h1");
+        h1Tag.textContent="H1 Tag"
+        // console.log(h1Tag);
+
+        let cont = document.getElementById("container");
+            cont.append(h1Tag);
+
+        let remData = document.getElementById("rem-data");
+        remData.remove();
+
+        let divChild = document.getElementById("div-child");
+        // console.log(divChild);
+        cont.removeChild(divChild);
+    </script>
+</body>
+</html>
