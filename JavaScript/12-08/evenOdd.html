@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #box{
+            margin: 10px;
+            height: 100px;
+            width: 100px;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <button id="btn">Check</button>
+    <div id="box">
+        <h1 id="msg"></h1>
+    </div>
+
+    <script>
+        let btn = document.getElementById("btn");
+        let msg = document.getElementById("msg");
+        let box = document.getElementById("box");
+
+        btn.addEventListener("click",function(){
+            let n = Number(prompt(("Enter Number 🤓"))); // we can also use + insteaded of Number()
+
+            if(n % 2 == 0){
+                msg.textContent=`${n} is Even`
+                box.style.backgroundColor="black";
+                msg.style.color=`white`;
+            }
+            else{
+                msg.textContent=`${n} is Odd`
+                box.style.backgroundColor="blue";
+                msg.style.color=`white`;
+            }
+        })
+    </script>
+</body>
+</html>
