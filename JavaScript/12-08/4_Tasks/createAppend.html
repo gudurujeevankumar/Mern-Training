@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creating and Appending</title>
+    <style>
+        .box{
+            height: 100px;
+            width: 100px;
+            border: solid 1px;
+        }
+        #container{
+            width: 550px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 1. Add Multiple Dynamic Elements
+
+    Concepts: createElement(), append()
+
+    Create a button called "Add Box".
+
+    Every time the button is clicked, dynamically create a new <div> containing:
+
+        New Box
+
+        and add it to the page. -->
+
+        <button id="btn">Add Box</button>
+        <div id="container">
+
+        </div>
+
+        <script>
+            let btn = document.getElementById("btn");
+            let container = document.getElementById('container');
+            let count = 0;
+
+            btn.addEventListener('click',()=>{
+                let box = document.createElement('div');
+                box.classList.add('box');
+                count ++;
+                box.textContent= count;
+
+                container.append(box);
+            })
+        </script>
+</body>
+
+</html>
