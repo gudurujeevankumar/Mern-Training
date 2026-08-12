@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Task</title>
+</head>
+
+<body>
+    <div id="container">
+        <form id="form-ele">
+
+            <input type="text" id="usn" placeholder="Enter User Name">
+
+            <input type="password" id="pwd" placeholder="Enter Password">
+
+            <input type="email" name="" id="email" placeholder="Enter Email">
+
+            <input type="submit" value="Login">
+        </form>
+
+        <h1>Welcome <span id="usr-msg"></span></h1>
+        <h1>Your Email is <span id="eml-msg"></span></h1>
+    </div>
+
+    <script>
+        //getting elements 
+        let formEle = document.getElementById("form-ele");
+        let usrMsg = document.getElementById("usr-msg");
+        let emlMsg = document.getElementById("eml-msg");
+
+
+        
+        formEle.addEventListener("submit", () => {
+            event.preventDefault();
+            let usn = document.getElementById("usn").value;
+            let psw = document.getElementById("pwd").value;
+            let email = document.getElementById("email").value;
+            
+            usrMsg.textContent=usn;
+            emlMsg.textContent=email;
+        })
+    </script>
+</body>
+
+</html>
