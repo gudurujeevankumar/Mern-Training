@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attribute</title>
+    <style>
+        .dynamic-class{
+            background-color: aqua;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <h1 id="get" class="getAttribute hasAttribute">Hello</h1>
+    </div>
+
+
+    <script>
+        // setAttribute , getAttribute, hasAttribute , removeAttribute
+
+        //setAttribute
+        let container = document.getElementById("container");
+        container.setAttribute('class','dynamic-class');
+
+        //getAttribute
+        let h1Tag = document.getElementById('get');
+        let res = h1Tag.getAttribute('class');
+        console.log(res);
+
+        //hasAttribute
+        console.log(h1Tag.hasAttribute('class'));
+
+        //removeAttribute
+        container.removeAttribute("class");
+    </script>
+</body>
+</html>
