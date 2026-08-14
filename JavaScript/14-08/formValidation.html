@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="../../Bootstrap/bootstrap-5.3.8-dist/css/bootstrap.min.css">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+</head>
+
+<body>
+    <header class="header bg-warning p-2">
+        <h1>Login</h1>
+    </header>
+
+    <section class="container-fluid mt-3">
+        <div class="row">
+            <div class="col-6 m-auto">
+                <div class="card text-center">
+                    <div class="card-header">
+                        <h4>Login</h4>
+                    </div>
+                    <div class="card-body">
+                        <form action="">
+                            <div class="mb-2 input-group">
+                                <span class="input-group-text"><i class="bi bi-person-circle"></i></span>
+                                <input type="text" class="form-control" id="usn">
+                            </div>
+
+                            <div class="mb-2 input-group">
+                                <span id="eye-icon" class="input-group-text"><i id="icon" class="bi bi-eye-fill"></i></span>
+                                <input type="password" class="form-control" id="psw">
+                                <span id="info-text" class="input-group-text">Show</span>
+                            </div>
+
+                            <input type="submit" class="btn btn-dark" value="Login">
+
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Script -->
+     <script>
+        let usnElement = document.getElementById('usn');
+        let pswElement = document.getElementById('psw');
+        
+        let usnValue = '';
+
+        usnElement.addEventListener('change',()=>{
+            usnValue = usnElement.value;
+            if(usnValue.length < 6){
+                alert(`Enter the user name with more than 6 characters, You Enter ${usnValue.length} characters`);
+            }
+            else{
+                
+            }
+        })
+
+
+     </script>
+</body>
+</html>
