@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset=utf-8 />
+    <title>Change the content of a cell</title>
+    <style type="text/css">
+        body {
+            margin: 30px;
+        }
+
+        .box {
+            border: solid 1px;
+        }
+
+        #table-container {
+            display: grid;
+        }
+    </style>
+</head>
+
+<body>
+    <table id="myTable" border="1">
+
+    </table>
+    <form>
+        <input type="button" onclick="createTable()" value="Create the table">
+    </form>
+    <br>
+
+    <div id="table-container">
+
+    </div>
+
+    <script>
+        let tableContainer = document.getElementById("table-container");
+
+        let createTable = ()=>{
+            let columns = +prompt("Enter columns :");
+            let rows = +prompt("Enter rows :");
+
+            tableContainer.style.gridTemplateColumns=`repeat(${columns},100px)`;
+            tableContainer.style.gridTemplateRows=`repeat(${rows},100px)`;
+
+            for(let i=0; i < (rows * columns); i++){
+                let box = document.createElement('div');
+                box.classList.add('box');
+                tableContainer.append(box);
+            }
+        }
+    </script>
+
+    <!-- <script>
+        // Function declaration for createTable
+        function createTable() {
+            // Prompting the user to input the number of rows
+            rn = window.prompt("Input number of rows", 1);
+            // Prompting the user to input the number of columns
+            cn = window.prompt("Input number of columns", 1);
+
+            // Looping through rows
+            for (var r = 0; r < parseInt(rn, 10); r++) {
+                // Inserting a new row at index r in the table
+                var x = document.getElementById('myTable').insertRow(r);
+                // Looping through columns
+                for (var c = 0; c < parseInt(cn, 10); c++) {
+                    // Inserting a new cell at index c in the current row
+                    var y = x.insertCell(c);
+                    // Setting the inner HTML content of the cell
+                    y.innerHTML = "Row-" + r + " Column-" + c;
+                }
+            }
+        }
+
+    </script> -->
+</body>
+
+</html>
