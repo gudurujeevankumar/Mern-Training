@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Data Handling</title>
+</head>
+
+<body>
+
+    <form id="form-ele">
+
+        <legend align="center">Registration Form</legend>
+
+        <table border="1" cellspacing="0" cellpadding="5" align="center">
+
+            <!-- First Name -->
+            <tr>
+                <th>
+                    <label for="first-name">First Name:</label>
+                </th>
+                <td>
+                    <input type="text" id="first-name" placeholder="Enter First Name">
+                </td>
+            </tr>
+
+            <!-- Last Name -->
+            <tr>
+                <th>
+                    <label for="last-name">Last Name:</label>
+                </th>
+                <td>
+                    <input type="text" id="last-name" placeholder="Enter Last Name">
+                </td>
+            </tr>
+
+            <!-- Email -->
+            <tr>
+                <th>
+                    <label for="email">Email:</label>
+                </th>
+                <td>
+                    <input type="email" id="email" placeholder="Enter Email">
+                </td>
+            </tr>
+
+            <!-- Mobile Number -->
+            <tr>
+                <th>
+                    <label for="mobile-no">Phno:</label>
+                </th>
+                <td>
+                    <input type="number" id="mobile-no" placeholder="Enter Mobile Number">
+                </td>
+            </tr>
+
+            <!-- DOB -->
+            <tr>
+                <th>
+                    <label for="dob">DOB:</label>
+                </th>
+                <td>
+                    <input type="date" id="dob">
+                </td>
+            </tr>
+
+            <!-- Gender -->
+            <tr>
+                <th>
+                    <label>Gender:</label>
+                </th>
+                <td>
+
+                    <input type="radio" name="gender" id="male" value="Male" checked>
+                    <label for="male">Male</label>
+
+                    <input type="radio" name="gender" id="female" value="Female">
+                    <label for="female">Female</label>
+
+                    <input type="radio" name="gender" id="others" value="Others">
+                    <label for="others">Others</label>
+
+                </td>
+            </tr>
+
+            <!-- Age -->
+            <tr>
+                <th>
+                    <label for="age">Age:</label>
+                </th>
+                <td>
+                    <input type="number" id="age">
+                </td>
+            </tr>
+
+            <!-- Preferences -->
+            <tr>
+                <th>
+                    <label>Preferences:</label>
+                </th>
+                <td>
+
+                    <input type="checkbox" value="Acrylic Painting" id="acrylic">
+                    <label for="acrylic">Acrylic Painting</label>
+
+                    <input type="checkbox" value="Oil Painting" id="oil">
+                    <label for="oil">Oil Painting</label>
+
+                    <input type="checkbox" value="Water Colour Painting" id="water">
+                    <label for="water">Water Colour Painting</label>
+
+                </td>
+            </tr>
+
+            <!-- State -->
+            <tr>
+                <th>
+                    <label for="state">State:</label>
+                </th>
+                <td>
+
+                    <select id="state" required>
+
+                        <option value="" selected disabled>
+                            Select State
+                        </option>
+
+                        <option value="AP">Andhra Pradesh</option>
+                        <option value="AR">Arunachal Pradesh</option>
+                        <option value="BR">Bihar</option>
+                        <option value="CH">Chandigarh</option>
+                        <option value="HP">Himachal Pradesh</option>
+                        <option value="KA">Karnataka</option>
+
+                    </select>
+
+                </td>
+            </tr>
+
+            <!-- Food -->
+            <tr>
+                <th>
+                    <label for="food-item">Food Items:</label>
+                </th>
+                <td>
+
+                    <select id="food-item" required>
+
+                        <option value="" selected disabled>
+                            Select Food Item
+                        </option>
+
+                        <option value="South Rice Combo">South Rice Combo</option>
+                        <option value="Chinese">Chinese</option>
+                        <option value="Roti">Roti</option>
+                        <option value="Sambar Rice">Sambar Rice</option>
+                        <option value="Fried Rice">Fried Rice</option>
+
+                    </select>
+
+                </td>
+            </tr>
+
+            <!-- Bio -->
+            <tr>
+                <th>
+                    <label for="bio-text">Bio:</label>
+                </th>
+                <td>
+                    <textarea id="bio-text" rows="10" cols="40"></textarea>
+                </td>
+            </tr>
+
+            <!-- Buttons -->
+            <tr>
+                <td colspan="2">
+
+                    <input type="reset" value="Reset">
+                    <input type="submit" value="Submit">
+
+                </td>
+            </tr>
+
+        </table>
+
+    </form>
+
+    <p id="msg"></p>
+
+
+    <script>
+
+        // ==============================
+        // FORM ELEMENT
+        // ==============================
+
+        let formEle = document.getElementById('form-ele');
+
+
+        // ==============================
+        // INPUT ELEMENTS
+        // ==============================
+
+        let firstName = document.getElementById('first-name');
+        let lastName = document.getElementById('last-name');
+        let email = document.getElementById('email');
+        let mobileNo = document.getElementById('mobile-no');
+        let dob = document.getElementById('dob');
+        let age = document.getElementById('age');
+        let bio = document.getElementById('bio-text');
+
+
+        // ==============================
+        // OUTPUT ELEMENT
+        // ==============================
+
+        let message = document.getElementById('msg');
+
+
+        // ==============================
+        // FORM SUBMIT
+        // ==============================
+
+        formEle.addEventListener('submit', (e) => {
+
+            e.preventDefault();
+
+
+            // ==============================
+            // GET SELECTED VALUES
+            // ==============================
+
+            let gender = document.querySelector(
+                "input[name='gender']:checked"
+            );
+
+            let state = document.getElementById('state');
+
+            let foodItem = document.getElementById('food-item');
+
+
+            // ==============================
+            // DISPLAY FORM DATA
+            // ==============================
+
+            message.textContent = `
+                First Name: ${firstName.value}
+                Last Name: ${lastName.value}
+                Email: ${email.value}
+                Mobile No: ${mobileNo.value}
+                DOB: ${dob.value}
+                Gender: ${gender.value}
+                Age: ${age.value}
+                State: ${state.value}
+                Food: ${foodItem.value}
+                Bio: ${bio.value}
+            `;
+
+        });
+
+    </script>
+
+</body>
+
+</html>
