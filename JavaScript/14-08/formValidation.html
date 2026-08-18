@@ -23,7 +23,7 @@
                         <h4>Login</h4>
                     </div>
                     <div class="card-body">
-                        <form action="">
+                        <form action="" id="form-ele">
                             <div class="mb-2 input-group">
                                 <span class="input-group-text"><i class="bi bi-person-circle"></i></span>
                                 <input type="text" class="form-control" id="usn">
@@ -48,20 +48,37 @@
      <script>
         let usnElement = document.getElementById('usn');
         let pswElement = document.getElementById('psw');
+        let formEle = document.getElementById('form-ele');
         
         let usnValue = '';
+        let pswValue = '';
+
+        let usnValid = false;
+        let pswValid = false;
 
         usnElement.addEventListener('change',()=>{
             usnValue = usnElement.value;
             if(usnValue.length < 6){
                 alert(`Enter the user name with more than 6 characters, You Enter ${usnValue.length} characters`);
             }
-            else{
-                
+            else {
+                usnValid = true;
             }
         })
 
+        pswElement.addEventListener('change',()=>{
+            pswValue = pswElement.value
+            if(pswValue.length <6){
+                alert(`Enter the password with more than 6 characters, You Enter ${pswElement.length} characters`)
+            }
+            else{
+                pswValid = true;
+            }
+        })
 
+        formEle.addEventListener('submit',()=>{
+            
+        })
      </script>
 </body>
 </html>
