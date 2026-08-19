@@ -8,3 +8,17 @@ console.log(arr,pu);
 let po = arr.pop(); // returns poped element
 console.log(arr);
 console.log('Poped Element is ',po);
+
+
+//unshift - adds element at starting
+console.log("unshift");
+
+let un = arr.unshift('unshift');
+console.log(arr);
+console.log('Unshift returns',un);
+
+//shift - removes element at starting
+console.log("Shift");
+let sh = arr.shift();
+console.log(arr);
+console.log("Shift returns ", sh);
