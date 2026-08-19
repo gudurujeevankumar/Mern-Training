@@ -22,3 +22,12 @@ console.log("Shift");
 let sh = arr.shift();
 console.log(arr);
 console.log("Shift returns ", sh);
+
+// sclice - Is used to get the part of an array
+
+let x = [1,2,3,4,5,6,7];
+
+let y = x.slice();
+x.pop();
+
+console.log(x.slice(-3,1));
