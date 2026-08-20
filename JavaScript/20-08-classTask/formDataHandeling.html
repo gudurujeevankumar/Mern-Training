@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Data Handeling</title>
+    <style>
+        * {
+            margin: 0px;
+        }
+
+        header {
+            padding: 20px;
+            box-shadow: 0px 0px 10px 0px;
+        }
+
+        #form-ele {
+            border-radius: 20px;
+            padding: 30px;
+            width: 300px;
+            margin: 50px auto;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            box-shadow: 0px 0px 10px 0px;
+            text-align: center;
+        }
+
+        input {
+            padding: 10px;
+        }
+        .msg-cont{
+            text-align: center;
+
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Form Handeling</h1>
+    </header>
+    <form action="" id="form-ele">
+        <h1>Form</h1>
+
+        <input type="text" placeholder="Enter User Name" id="user">
+        <input type="password" placeholder="Enter Password" id="psw">
+        <input type="email" placeholder="Enter Email" id="email">
+
+        <div class="gender">
+            <label for="gender">Gender : </label>
+
+            <input type="radio" name="gender" id="male" value="male">
+            <label for="male">Male</label>
+
+            <input type="radio" name="gender" id="female" value="female">
+            <label for="female">Female</label>
+        </div>
+
+        <input type="submit">
+    </form>
+    <div class="msg-cont">
+        <p><span id="user-msg"></span></p>
+        <p><span id="email-msg"></span></p>
+        <p><span id="gender-msg"></span></p>
+
+    </div>
+    <!-- SCRIPT -->
+    <script>
+        // Getting the elements
+        let formEle = document.getElementById('form-ele');
+        let user = document.getElementById('user');
+        let psw = document.getElementById('psw');
+        let email = document.getElementById('email');
+        
+
+        //message elements
+        let userMsg = document.getElementById('user-msg');
+        let emailMsg = document.getElementById('email-msg');
+        let genderMsg = document.getElementById('gender-msg');
+
+        //form data handeling 
+
+        formEle.addEventListener('submit',(e)=>{
+            e.preventDefault();
+            let gender = document.querySelector("input[type=radio]:checked");
+
+            userMsg.textContent=`Hello ${user.value}`;
+            emailMsg.textContent=`Your Email is ${email.value}`;
+            genderMsg.textContent=`Your gender is ${gender.value}`;
+        })
+
+    </script>
+</body>
+
+</html>
