@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expense Calculator</title>
+    <link rel="stylesheet" href="../../../Bootstrap/bootstrap-5.3.8-dist/css/bootstrap.min.css">
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="card col-5">
+            <div class="card-header">
+                <h1>Expense Tracker</h1>
+            </div>
+            <div class="card-body">
+                <form action="" class="text-center" id="form-container">
+                    <input type="number" placeholder="Total Amount" class="mb-2" id="total-amt" required>
+                    <input type="number" placeholder="Your Expense" class="mb-2" id="your-exp" required>
+                    <input type="number" placeholder="Your Friend's expense" readonly class="mb-2" id="friend-exp"
+                        value="0">
+                    <select name="" id="drop-down" required>
+                        <option value="" selected disabled>Select Person</option>
+                        <option value="you">You</option>
+                        <option value="your friend">Your Friend</option>
+                    </select> <br> <br>
+                    <input type="submit" value="check" class="btn btn-dark">
+                </form>
+                <p id="msg"></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Script -->
+    <script>
+        let formElement = document.getElementById('form-container');
+        let totalAmountElement = document.getElementById('total-amt');
+        let yourExpenseElement = document.getElementById('your-exp');
+        let friendExpenceElement = document.getElementById('friend-exp');
+        let dropDownOption = document.getElementById('drop-down');
+
+        let totalAmountValue = 0;
+        let yourExpenseValue = 0;
+        let friendExpenseValue = 0;
+        
+        totalAmountElement.addEventListener('change',()=>{
+            totalAmountValue=totalAmountElement.value;
+        })
+
+        yourExpenseElement.addEventListener('change',()=>{
+            
+            yourExpenseValue=yourExpenseElement.value;
+
+            friendExpenseElement.setAttribute('value',totalAmountValue-yourExpenseValue);
+        })
+
+    </script>
+</body>
+
+</html>

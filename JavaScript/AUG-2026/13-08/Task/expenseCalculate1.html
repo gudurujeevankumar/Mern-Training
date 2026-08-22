@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expense Calculator</title>
+    <link rel="stylesheet" href="../../../Bootstrap/bootstrap-5.3.8-dist/css/bootstrap.min.css">
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="card col-5">
+            <div class="card-header">
+                <h1>Expense Tracker</h1>
+            </div>
+            <div class="card-body">
+                <form action="" class="text-center" id="form-container">
+                    <input type="number" placeholder="Total Amount" class="mb-2" id="total-amt" required>
+                    <input type="number" placeholder="Your Expense" class="mb-2" id="your-exp" required>
+                    <input type="number" placeholder="Your Friend's expense" readonly class="mb-2" id="friend-exp"
+                        value="0">
+                    <select name="" id="drop-down" required>
+                        <option value="" selected disabled>Select Person</option>
+                        <option value="you">You</option>
+                        <option value="your friend">Your Friend</option>
+                    </select> <br> <br>
+                    <input type="submit" value="check" class="btn btn-dark">
+                </form>
+                <p id="msg"></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Script -->
+    <script>
+        let formContainer = document.getElementById('form-container');
+        let totalAmt = document.getElementById("total-amt");
+        let yourExp = document.getElementById('your-exp');
+        let friendExp = document.getElementById('friend-exp');
+        let dropDown = document.getElementById('drop-down');
+        let msg = document.getElementById('msg');
+
+        let totalAmount = 0;
+        let yourAmount = 0;
+        let friendExpAmount = 0;
+        let dropDownValue;
+
+        totalAmt.addEventListener('input', () => {
+            totalAmount = Number(totalAmt.value);
+
+            friendExpAmount = totalAmount - yourAmount;
+            friendExp.value = friendExpAmount;
+        });
+
+        yourExp.addEventListener('input', () => {
+            yourAmount = Number(yourExp.value);
+
+            if (yourAmount <= totalAmount) {
+                friendExpAmount = totalAmount - yourAmount;
+                friendExp.value = friendExpAmount;
+            }
+        });
+
+        formContainer.addEventListener("submit", (event) => {
+            event.preventDefault();
+
+            dropDownValue = dropDown.value;
+
+            if (dropDownValue == 'you') {
+                msg.textContent = `Your Friend has to give you Rs: ${friendExpAmount}`;
+            }
+            else{
+                msg.textContent = `You have to give Rs: ${yourAmount} to your Friend `;
+            }
+        });
+    </script>
+</body>
+
+</html>

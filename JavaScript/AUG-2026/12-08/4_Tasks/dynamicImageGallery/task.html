@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Image Gallery</title>
+    <style>
+        img{
+            height: 200px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 4. Dynamic Image Gallery
+
+        Concepts: createElement(), setAttribute(), appendChild(), remove()
+
+        Create buttons:
+
+        Add Image
+        Remove Last Image
+
+        When Add Image is clicked:
+
+        Create an <img>
+        Set its src dynamically
+        Add it to a gallery container
+
+        When Remove Last Image is clicked, remove the last image. -->
+
+    <button id="add-btn">Add Image</button>
+    <button id="rm-btn">Remove Last Image</button>
+
+    <hr>
+
+    <div id="container">
+
+    </div>
+
+    <script>
+        let addBtn = document.getElementById('add-btn');
+        let rmBtn = document.getElementById('rm-btn');
+        let container = document.getElementById('container');
+        let count = 0;
+        
+        addBtn.addEventListener('click',()=>{          
+            if(count<4){
+                count ++
+                let img = document.createElement('img');
+
+                img.setAttribute('src',`img${count}.png`);
+                container.appendChild(img);
+            }
+        })
+
+        rmBtn.addEventListener('click',()=>{
+            if(container.lastElementChild){
+                count --
+                container.lastElementChild.remove();
+            }
+        })
+    </script>
+</body>
+
+</html>
