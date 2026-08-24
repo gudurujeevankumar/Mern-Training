@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+
+<body>
+    <input type="number" name="" id="inp">
+    <input type="number" name="" id="position">
+    <button id="ins-btn">Insert</button>
+
+    <p id="msg">Array : </p>
+
+    <script>
+        const inpEle = document.getElementById('inp');
+        const posEle = document.getElementById('position');
+        const insBtn = document.getElementById('ins-btn');
+        const msg = document.getElementById('msg');
+
+        let arr = [];
+        insBtn.addEventListener('click', () => {
+            let inpVal = inpEle.value;
+            let posVal = posEle.value;
+
+            arr.splice(posVal, 0, inpVal);
+            msg.textContent = `Array :${arr}`;
+
+        })
+    </script>
+</body>
+
+</html>
