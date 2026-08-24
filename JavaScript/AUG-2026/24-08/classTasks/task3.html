@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 2</title>
+</head>
+
+<body>
+
+    <input type="number" name="" id="inp">
+    <button id="add">Add</button>
+    <button id="sum">Find Sum</button>
+
+    <p id="msg"></p>
+
+    <script>
+        let addBtn = document.getElementById('add');
+        let sumBtn = document.getElementById('sum');
+        let msg = document.getElementById('msg');
+        let inp = document.getElementById('inp')
+
+        let arr = [];
+
+        addBtn.addEventListener('click', () => {
+            let val = +document.getElementById('inp').value;
+            if (val > 0) {
+                arr.push(val);
+
+                msg.textContent = "Array :" + arr;
+                inp.value = '';
+            }
+        })
+
+        sumBtn.addEventListener('click', () => {
+            let c = 0;
+            for(let v of arr){
+                c += v;
+            }
+            msg.innerHTML=`<p>Array :${arr} </p> <p>${c}</p>`
+        })
+    </script>
+</body>
+
+</html>
