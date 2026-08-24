@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get Part of Array</title>
+</head>
+
+<body>
+    <input type="number" name="" id="start" placeholder="Starting Index">
+    <input type="number" name="" id="end" placeholder="Ending Index">
+    <button id="get-btn">Get</button>
+
+    <p id="pre-arr"></p>
+    <p id="part-arr">Part Array :</p>
+    <script>
+        const startEle = document.getElementById('start');
+        const endEle = document.getElementById('end');
+        const getBtn = document.getElementById('get-btn');
+        const preArr = document.getElementById('pre-arr');
+        const partArr = document.getElementById('part-arr');
+
+        let arr = [1, 2, 3, 4, 5, 6, 7, 8];
+        preArr.textContent = `Present Array : [${arr}]`
+        getBtn.addEventListener('click', () => {
+            startVal = startEle.value;
+            endVal = endEle.value;
+
+            let pArray = arr.slice(startVal,endVal);
+
+            partArr.textContent = `Part Array : [${pArray}]`
+
+        })
+    </script>
+</body>
+
+</html>
