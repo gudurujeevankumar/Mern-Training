@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 2</title>
+</head>
+
+<body>
+
+    <input type="number" name="" id="inp">
+    <button id="add">Add</button>
+    <button id="rem">Remove</button>
+
+
+    <p id="msg"></p>
+
+    <script>
+        let addBtn = document.getElementById('add');
+        let remBtn = document.getElementById('rem');
+        let msg = document.getElementById('msg');
+        let inp = document.getElementById('inp')
+
+        let arr = [];
+
+        addBtn.addEventListener('click', () => {
+            let val = document.getElementById('inp').value;
+            if (val > 0) {
+                arr.push(val);
+
+                msg.textContent = arr;
+                inp.value = '';
+            }
+        })
+
+        remBtn.addEventListener('click', () => {
+            if (arr.length > 0) {
+                arr.pop();
+
+                msg.textContent = arr;
+                inp.value = '';
+            }
+        })
+    </script>
+</body>
+
+</html>
