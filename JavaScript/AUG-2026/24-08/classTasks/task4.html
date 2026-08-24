@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Title 4</title>
+</head>
+
+<body>
+    <input id="inp" type="number">
+    <button id="join-btn">Join Queue</button>
+    <button id="rel-btn">Release Queue</button>
+
+    <p id="msg">Array :</p>
+
+    <script>
+        const inp = document.getElementById('inp');
+        const joinBtn = document.getElementById('join-btn');
+        const relBtn = document.getElementById('rel-btn');
+        const msg = document.getElementById('msg');
+
+        let arr = [];
+        joinBtn.addEventListener('click', () => {
+            let val = +inp.value;
+            if (val) {
+                arr.push(val);
+
+                msg.textContent = `Array : ${arr}`;
+                inp.value = '';
+            }
+        })
+
+        relBtn.addEventListener('click',()=>{
+            if(arr.length){
+                arr.shift();
+
+                msg.textContent = `Array : ${arr}`;
+            }
+        })
+    </script>
+</body>
+
+</html>
