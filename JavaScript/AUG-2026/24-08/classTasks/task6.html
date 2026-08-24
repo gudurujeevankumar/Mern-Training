@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Replace Elements</title>
+</head>
+
+<body>
+    <label for="position">Position :</label>
+    <input type="number" name="" id="position">
+
+    <label for="">New Item :</label>
+    <input type="number" name="" id="inp">
+    <button id="rp-btn">Replace</button>
+
+    <p id="msg">Array : </p>
+
+    <script>
+        const inpEle = document.getElementById('inp');
+        const posEle = document.getElementById('position');
+        const rpBtn = document.getElementById('rp-btn');
+        const msg = document.getElementById('msg');
+
+        let arr = [1, 2, 3, 4, 5, 6];
+        msg.textContent = `Array :${arr}`;
+
+        rpBtn.addEventListener('click', () => {
+            let posVal = posEle.value;
+            let inpVal = inpEle.value;
+
+            arr[posVal] = inpVal;
+            msg.textContent = `Array :${arr}`;
+
+        })
+    </script>
+</body>
+
+</html>
