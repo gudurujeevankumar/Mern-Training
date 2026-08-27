@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>textContent , innerText, innerHTML</title>
+</head>
+
+<body>
+    <div id="div-cont">
+        <h1>Hello</h1>
+        <br> <br>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, delectus?</p>
+    </div>
+
+    <script>
+        let divCont = document.getElementById('div-cont');
+
+        console.log(divCont.textContent); // textContent will get the text inside the element without spaces and with styles
+        console.log(divCont.innerText); // innerText will get text from element but not consider style, and it includes spaces
+        console.log(divCont.innerHTML); // innerHTMl will get the total element with tags also
+
+    </script>
+</body>
+
+</html>
