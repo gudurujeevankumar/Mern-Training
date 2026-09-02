@@ -46,7 +46,7 @@ let {address:{city,state}} = emp
 console.log(city);
 console.log(state);
 
-// function 
+// function parameter 
 function main({ename,doj}){
     console.log(ename,doj);
 }
