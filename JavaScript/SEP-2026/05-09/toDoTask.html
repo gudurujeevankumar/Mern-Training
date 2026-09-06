@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../../Bootstrap/bootstrap-5.3.8-dist/css/bootstrap.css">
+    <title>Task Management</title>
+</head>
+<body>
+    <nav class="navbar navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a href="#" class="navbar-brand">Task Management</a>
+            <button class="btn btn-warning text-bold">Total Task: <span id="total-count">0</span></button>
+        </div>
+    </nav>
+
+    <section class="container-fluid mt-4">
+        <div class="row">
+            <div class="col-5 m-auto">
+                <form id="form-ele">
+                    <div class="mb-2">
+                        <input type="text" class="form-control" placeholder="enter task" id="task-input">
+                    </div>
+
+                    <input type="submit" value="Add Task" class="btn btn-warning btn-sm">
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <section class="container-fluid mt-4">
+        <div class="row">
+            <div class="col-5 m-auto">
+                <ul class="list-group" id="list-display">
+                   <!-- Displaying list here -->
+                    
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <script >
+        
+let formEle = document.getElementById('form-ele');
+let inputEle = document.getElementById('task-input');
+let listDisplay = document.getElementById('list-display');
+let totalDisplay = document.getElementById('total-count')
+
+let taskList = [
+        {id:101, task:'Task 1', isCompleted:false, date:'9/4/2026, 10:33:24 AM' }
+];
+
+function displayItems() {
+    let htmlCode = ``;
+
+    taskList.forEach(function (task) {
+        htmlCode += `<li class="lisxt-group-item">
+                        <input type="checkbox" class="form-check-input" ${task.isCompleted?"checked":""} onchange=handleChecked(event,${task.id})>
+                        <span class="h5 mx-2 ${task.isCompleted ? 'text-danger':'text-success'}">${task.task}</span>
+                        <span class="text-secondary mx-2"> Created on: ${task.date}</span>
+                        <button class="btn btn float-end" onclick='handleDelete(${task.id})'>Delete❌</button>
+                    </li>`
+
+    })
+    listDisplay.innerHTML = htmlCode;
+}
+
+displayItems();
+totalDisplay.textContent = taskList.length;
+
+formEle.addEventListener('submit', function (e) {
+    e.preventDefault();
+    let taskInputValue = inputEle.value;
+    if (taskInputValue) {
+        let newObj = {
+            id: Math.trunc(Math.random() * 1000),
+            task: taskInputValue,
+            date: new Date().toLocaleString(),
+            isCompleted: false
+        }
+        taskList.push(newObj)
+        displayItems();
+        inputEle.value = '';
+        totalDisplay.textContent = taskList.length;
+    }
+    else {
+        alert('Enter valid Input')
+    }
+})
+
+    function handleChecked(e,id){
+    
+        let checkedEle = taskList.find(task => task.id == id);
+        checkedEle.isCompleted = e.target.checked;
+        displayItems();
+
+    }
+
+    function handleDelete(id){
+        taskList = taskList.filter(task=>task.id!=id);
+        displayItems();
+    }
+    </script>
+</body>
+</html>
