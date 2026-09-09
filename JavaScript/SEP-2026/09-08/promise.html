@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promise</title>
+</head>
+<body>
+    <script>
+        // promise is pending
+        let p1 = new Promise(()=>{
+
+        })
+        console.log(p1);
+
+        // promise is fullfilled
+        let p2 = new Promise((resolved,reject)=>{
+            resolved('Promise was success / resolved...!');
+        })
+        console.log(p2);
+
+        // promise is rejected
+        let p3 = new Promise((succes,reject)=>{
+            reject('Promise was rejected..!');
+        })
+
+
+        let p4 = new Promise((resolve,reject)=>{
+            let result = true;
+            if(result){
+                resolve([10,20,30,40]);
+            }
+            else{
+                reject([10,20,'failed','failed']);
+            }
+        })
+        console.log(p4);
+    </script>
+</body>
+</html>
