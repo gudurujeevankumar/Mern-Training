@@ -1,14 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
     <script>
-        
-        
+        console.log('started');
+        let p1 = new Promise((resolve, reject) => {
+            
+            setTimeout(() => {
+                resolve("Hello I'm resolve")
+            }, 2000)
+        });
+
+        p1.then(data => console.log(data)).catch(err => console.log(err));
+        console.log('End');
+
+        const myPromise = new Promise((resolve, reject) => {
+            resolve("Success !");
+        })
+
+        myPromise
+            .then((data) => console.log("Then: " + data))
+            .catch((err) => console.log("Catch: " + err));
+
+        const total = new Promise((resolve) => resolve(5));
+
+        total
+            .then((num) => num * 2)
+            .then((result) => console.log(result));
+
+        Promise.resolve("Pizza")
+            .then((food) => {
+                console.log("Eating " + food);
+                // No return statement
+            })
+            .then((result) => {
+                console.log("Result is: " + result);
+            });
+
     </script>
 </body>
+
 </html>
