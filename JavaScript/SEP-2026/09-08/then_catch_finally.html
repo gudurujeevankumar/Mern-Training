@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Then Catch Finally</title>
+</head>
+<body>
+
+    <script>
+        let p1 = new Promise((resolved,reject)=>{
+            let result = true;
+
+            if(result){
+                resolved([50,60,40,50,30]);
+            }
+            else{
+                rejected(['failed','failed',50,23,10]);
+            }
+        })
+
+        p1.then(data => console.log(data)).catch(data=>console.log("data"));
+    </script>
+</body>
+</html>
